@@ -1,0 +1,169 @@
+@import 'bootstrap';
+
+
+
+.containerIntroHome {
+    /* background-image: url(/public\images\material-design-grey-po-1336x768.jpg); */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-image: url("C:\Users\lucal\desktop\aulab\laravel\laravel_leanza_we_migrationandmodels\MigrationAndModel\public\images\2175435.jpg");
+    background-size: cover;
+
+}
+
+.containerTitoloHome {
+    background-color: rgba(255, 255, 255, 0.721);
+    height: 40vh;
+    width: 600px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    border: solid 3px #6e7491;
+    text-align: center;
+}
+
+.containerTitoloHome:hover {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+}
+
+.containerTitoloHome:hover .border {
+    transform: translateY(4px) rotate(-5deg);
+}
+
+.containerTitoloHome h1 {
+    font-size: 3em;
+    color: black;
+    text-shadow: 2px 2px 4px #00000016;
+}
+
+
+.button-55 {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 30px;
+}
+
+.button-55:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+    background-color: #101010;
+    color: white;
+}
+
+.button-55:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.containerCardIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-image: url("C:\Users\lucal\desktop\aulab\laravel\laravel_leanza_we_migrationandmodels\MigrationAndModel\public\images\2175435.jpg");
+    background-size: cover;
+}
+
+#cardComponent {
+    background-color: rgba(255, 255, 255, 0.721);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    border-style: solid;
+    border-width: 2px;
+    color: #41403e;
+}
+
+#cardComponent:hover {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+}
+#cardComponent a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#cardComponent a:hover {
+    color: #6e7491;
+}
+
+#dropdown-menu{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.form{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("C:\Users\lucal\desktop\aulab\laravel\laravel_leanza_we_migrationandmodels\MigrationAndModel\public\images\2175435.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+.containerForm{
+    
+    width: 500px;
+    height: 60vh;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.721);
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#submit{
+    margin-top: 20px;
+}
