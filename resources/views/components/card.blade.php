@@ -1,8 +1,10 @@
 <div id="cardComponent" class="card">
     <div class="card-body">
-      <h5 class="card-title">{{$title}}</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">{{$author}}</h6>
+      <h3 class="card-title"><span class="titoloPrincipaleCard">{{$title}}</span></h3>
+      <p class="card-subtitle mb-2 text-body-secondary"><span class="titoliCard">Autore: </span>{{$author}}</p>
+      <p class="card-subtitle mb-2 text-body-secondary"><span class="titoliCard">Categoria:</span> {{$category}} </p>
       <p class="card-text">{{$content}}</p>
-      <a href="#" class="card-link">Visualizza di più</a>
+
+      <a id="card-link" href="#" class="card-link">Visualizza di più</a>
     </div>
   </div>

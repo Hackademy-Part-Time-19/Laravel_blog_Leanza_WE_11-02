@@ -93,14 +93,15 @@
 }
 
 .containerCardIndex {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    height: 100vh;
+    padding: 20px;
     background-image: url("C:\Users\lucal\desktop\aulab\laravel\laravel_leanza_we_migrationandmodels\MigrationAndModel\public\images\2175435.jpg");
     background-size: cover;
+
 }
 
 #cardComponent {
@@ -125,21 +126,24 @@
     transform: translateY(-5px) rotate(1deg);
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
 }
+
 #cardComponent a {
     text-decoration: none;
-    color: black;
+    color: rgb(10, 10, 136);
     font-weight: bold;
 }
 
 #cardComponent a:hover {
-    color: #6e7491;
+    color: #1a3ce9;
+
 }
 
-#dropdown-menu{
+#dropdown-menu {
     margin-bottom: 20px;
     margin-top: 20px;
 }
-.form{
+
+.form {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -149,10 +153,11 @@
     height: 100vh;
     background-size: cover;
 }
-.containerForm{
-    
+
+.containerForm {
+
     width: 500px;
-    height: 60vh;
+    height: 80vh;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.721);
     border-top-left-radius: 37px 140px;
@@ -162,8 +167,74 @@
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     border-style: solid;
     border-width: 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#submit{
+.containerForm label {
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#submit {
+    margin-top: 10px;
+
+
+
+}
+
+.containerSubmitForm {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     margin-top: 20px;
+}
+
+#category {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.titoliCard {
+    font-weight: 700;
+}
+
+.titoloPrincipaleCard {
+    font-weight: 700;
+    font-size: 27px;
+    color: black;
+    position: relative;
+    bottom: 9px;
+}
+
+#alertError {
+    height: 25px;
+    background-color: rgba(255, 0, 0, 0.4);
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    border-radius: 7px;
+    margin-bottom: 5px;
+}
+
+#alertError span {
+    color: rgba(62, 9, 9, 0.996);
+    font-weight: 700;
+    font-size: 12px;
+    text-shadow: 2px 2px 4px #0000001d;
+}
+
+#alertSuccess {
+    height: 40px;
+    background-color: rgba(0, 255, 0, 0.261);
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    align-items: center;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    color: rgb(12, 78, 12);
 }

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreArticleRequest;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    private $articles = [
+/*     private $articles = [
         1 => [
             'title' => 'How to be a programmer',
             'content' => 'This is a guide on how to be a programmer',
@@ -24,14 +25,13 @@ class ArticleController extends Controller
             'author' => 'Mary Cross',
         ]
     ];
-
+ */
 
     public function home(){
         return view('home');
     }
 
     public function index(){
-
         $articles = Article::all();
         return view('articles-index', ['articles' => $articles]);
     }
@@ -41,18 +41,9 @@ class ArticleController extends Controller
     }
 
 
-    public function store (Request $request){
-      
-        Article::create($request->all());
+    public function store (StoreArticleRequest $request){
+        Article::create($request->validated());
 
-        return redirect()->route('articles.index');
-    }
-
-
-
-
-    public function saveToDatabase(){
-        
-
+        return redirect()->back()->with('success', 'Articolo creato con successo');
     }
 }
