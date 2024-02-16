@@ -21,3 +21,11 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('articles.ind
 Route::get('/articles/create', [ArticleController::class, 'vaiAForm'])->name('articles.create');
 
 Route::post("/invio", [ArticleController::class, "store"])->name("invio");
+
+
+
+Route::middleware('auth')->group(function() {
+    Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+    Route::get('/articles/create', [ArticleController::class, 'vaiAForm'])->name('articles.create');
+    Route::post("/invio", [ArticleController::class, "store"])->name("invio");
+});

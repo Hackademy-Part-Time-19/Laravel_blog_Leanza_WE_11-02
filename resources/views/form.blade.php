@@ -3,14 +3,12 @@
 
     <form class="form" action="{{ route('invio') }}" method="POST">
         @csrf
-
-     
-
-
         <div class="containerForm">
+           
             @if(session('success'))
             <div id="alertSuccess"><span class="alert-success">{{ session('success') }}</span></div>
             @endif
+            <h1 style="margin-bottom:20px; font-size:30px">Inserisci il tuo articolo</h1>
             <div class="mb-3">
                 <label for="text" class="form-label">Titolo</label>
                 <input type="text" name="title" class="form-control" id="exampleInputText" value="{{old('title')}}" >
