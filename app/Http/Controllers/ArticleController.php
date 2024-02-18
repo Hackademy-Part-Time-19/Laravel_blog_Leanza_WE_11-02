@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreArticleRequest;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -46,4 +47,6 @@ class ArticleController extends Controller
 
         return redirect()->back()->with('success', 'Articolo creato con successo');
     }
+
+
 }

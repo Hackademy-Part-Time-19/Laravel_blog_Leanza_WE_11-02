@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,14 @@ Route::middleware('auth')->group(function() {
     Route::get('/articles/create', [ArticleController::class, 'vaiAForm'])->name('articles.create');
     Route::post("/invio", [ArticleController::class, "store"])->name("invio");
 });
+
+
+
+
+
+Route::middleware('auth')->group(function() {
+    Route::resource('categories', CategoryController::class);
+});
+
+
+

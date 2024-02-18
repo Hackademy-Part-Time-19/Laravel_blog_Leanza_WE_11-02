@@ -1,5 +1,10 @@
 @import 'bootstrap';
 
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
 
 
 .containerIntroHome {
@@ -93,7 +98,8 @@
 }
 
 .containerCardIndex {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,4 +242,45 @@
     border-radius: 7px;
     margin-bottom: 30px;
     color: rgb(12, 78, 12);
+}
+
+.introCategories {
+    background-color: rgba(231, 228, 228, 0.687);
+    height: 30vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+.introCategories button {
+    margin-top: 20px;
+}
+
+.introCategories h1 {
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px #00000016;
+}
+
+#tdButton {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    right: 69px;
+}
+
+#tdButton button {
+    margin-right: 20px;
+}
+
+.containerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin: 0px;
 }

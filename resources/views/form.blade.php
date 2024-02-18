@@ -25,12 +25,11 @@
            @enderror
             <select class="form-select" name="category" id="category">
                 <option selected value="">Seleziona la categoria dell'articolo </option>
-                <option value="sport">Sport</option>
-                <option value="politica">Politica</option>
-                <option value="cronaca">Cronaca</option>
-                <option value="economia">Economia</option>
-                <option value="scienza">Scienza</option>
+                @foreach ($categories as $category)
+                <option value={{$category['name']}}>{{$category['name']}}</option>
+                @endforeach
             </select>
+          
             @error('category')
             <div id="alertError"><span class="alert-danger">{{ $message }}</span></div>
            @enderror
