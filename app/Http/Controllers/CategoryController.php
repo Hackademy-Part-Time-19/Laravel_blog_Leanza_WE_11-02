@@ -48,7 +48,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('view-category.form-edit', ['category' => $category]);
+        return view('view-category.form-edit', ['category' => $category])->with('success', 'Categoria modificata con successo');
     }
 
     /**

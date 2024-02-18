@@ -1,9 +1,9 @@
 <x-main-layout>
     <x-navbar />
 
-    <form class="form" action="{{ route('invio') }}" method="POST">
+    <form class="form" action="{{ route('invio') }}" method="POST" style="justify-content: start;padding-top:50px">
         @csrf
-        <div class="containerForm">
+        <div class="containerForm" style="min-height:600px;height:auto">
            
             @if(session('success'))
             <div id="alertSuccess"><span class="alert-success">{{ session('success') }}</span></div>
@@ -41,7 +41,7 @@
            @enderror
 
             <div class="containerSubmitForm">
-                <button id="submit" type="submit" class="btn btn-secondary">Submit</button>
+                <button id="submit" type="submit" class="btn btn-secondary">Crea il tuo articolo</button>
             </div>
         </div>
 

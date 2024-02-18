@@ -8,7 +8,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="position: relative; right:20px">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" style="margin-left:130px" href="{{route ('home')}}">Home</a>
                     </li>
@@ -18,20 +18,23 @@
                     <li class="nav-item" >
                         <a class="nav-link" href="{{route('articles.create')}}">Inserisci un articolo</a>
                     </li>
-                    <li class="nav-item" >
-                        <a class="nav-link" href="/categories">Gestisci le categorie</a>
-                    </li>
-        
                 </ul>
             </div>
            
                 
         </div>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" style="">
             @auth
-            
-            <li class="nav-item" style="font-weight: 400">
-                <a class="nav-link" href="">Utente logato: {{auth()->user()->name ?? ''}}</a></a>
+            <li class="nav-item" style="font-weight: 400;">
+                <div class="dropdown" style="margin-right: 10px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 15px">
+                         Login: {{auth()->user()->name ?? ''}}
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <li><a class="dropdown-item" href="/categories">Gestisci le categorie</a></li>
+                    </ul>
+                  </div>
             </li>
             <form action="{{route('logout')}}" method="POST">
                 @csrf

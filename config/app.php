@@ -1,7 +1,13 @@
 <?php
 
+use App\Providers\AppServiceProvider;
+use App\Providers\AuthServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Socialite\Facades\Socialite;
+use App\Providers\BroadcastServiceProvider;
+use Laravel\Socialite\SocialiteServiceProvider;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 
 return [
 
@@ -170,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         
+
     ])->toArray(),
 
     /*
@@ -184,7 +191,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+      
     ])->toArray(),
 
 ];

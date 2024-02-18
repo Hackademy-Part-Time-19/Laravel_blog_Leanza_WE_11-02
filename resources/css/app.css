@@ -1,9 +1,11 @@
 @import 'bootstrap';
 
+
+
 a {
     text-decoration: none;
-    color: black;
-    font-weight: 500;
+    color: white;
+ 
 }
 
 
@@ -107,12 +109,13 @@ a {
     padding: 20px;
     background-image: url("C:\Users\lucal\desktop\aulab\laravel\laravel_leanza_we_migrationandmodels\MigrationAndModel\public\images\2175435.jpg");
     background-size: cover;
+    padding-top: 80px;
 
 }
 
 #cardComponent {
     background-color: rgba(255, 255, 255, 0.721);
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,6 +167,7 @@ a {
     width: 600px;
     height: 85vh;
     padding: 40px;
+    padding-top: 60px;
     background-color: rgba(255, 255, 255, 0.721);
     border-top-left-radius: 37px 140px;
     border-top-right-radius: 23px 130px;
@@ -173,7 +177,7 @@ a {
     border-style: solid;
     border-width: 2px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
 }
 
@@ -245,13 +249,14 @@ a {
 }
 
 .introCategories {
-    background-color: rgba(231, 228, 228, 0.687);
+    background-color: #dadada;
     height: 30vh;
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 20px;
     flex-direction: column;
+    padding-top: 50px;
 
 }
 

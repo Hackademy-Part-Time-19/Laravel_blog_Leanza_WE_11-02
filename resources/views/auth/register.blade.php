@@ -4,7 +4,7 @@
 
 
 
-    <form class="form" action="/register" method="POST">
+    <form class="form" action="/register" method="POST" style="justify-content: start;padding-top:40px">
         @csrf
         <div class="containerForm">
 

@@ -1,9 +1,9 @@
 <x-main-layout>
     <x-navbar />
 
-    <form class="form" action="/login" method="POST">
+    <form class="form" action="/login" method="POST" style="justify-content: start;padding-top:100px">
       @csrf
-    <div class="containerForm">
+    <div class="containerForm" style="min-height:200px; height:400px;">
  
       <div class="mb-3">
           <h1 style="margin-bottom:20px">Login</h1>
