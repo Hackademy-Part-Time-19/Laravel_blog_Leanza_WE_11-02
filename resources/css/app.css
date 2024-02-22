@@ -161,6 +161,7 @@ a {
     background-image: url("C:\Users\lucal\desktop\aulab\laravel\laravel_leanza_we_migrationandmodels\MigrationAndModel\public\images\2175435.jpg");
     height: 100vh;
     background-size: cover;
+    margin-top: 50px;
 }
 
 .containerForm {
@@ -257,6 +258,7 @@ a {
     padding: 20px;
     flex-direction: column;
     padding-top: 50px;
+    margin-top: 50px;
 
 }
 
@@ -288,4 +290,25 @@ a {
     align-items: center;
     background-color: red;
     margin: 0px;
+}
+.noArticles{
+    color: rgba(255, 255, 255, 0.801);
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.containerButtonCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 60px;
+    
 }

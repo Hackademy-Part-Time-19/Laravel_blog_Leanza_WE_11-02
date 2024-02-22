@@ -25,7 +25,7 @@ class StoreArticleRequest extends FormRequest
             
             'title' => ['required','max:550'],
             'author' => ['required', 'max:30'],
-            'category' => ['required','max:255'],
+            'category_id' => ['required'],
             'content' => ['required', 'max:5000'],
         ];
         
@@ -38,7 +38,7 @@ class StoreArticleRequest extends FormRequest
             'title.max' => 'Il campo titolo è troppo lungo',
             'author.required' => 'Il campo autore è obbligatorio',
             'author.max' => 'Il campo autore è troppo lungo',
-            'category.required' => 'Selezionare una categoria',
+            'category_id.required' => 'Selezionare una categoria',
             'content.required' => 'Il campo articolo è obbligatorio',
             'content.max' => 'Il campo articolo è troppo lungo',
         ];

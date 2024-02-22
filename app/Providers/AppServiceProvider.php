@@ -4,8 +4,9 @@ namespace App\Providers;
 
 use App\Models\Category;
 //use Doctrine\DBAL\Schema\View;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -23,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('categories', Category::all());
-
+            View::share('categories', Category::all());
+            View::share('articles', Category::all());
     }
 }
