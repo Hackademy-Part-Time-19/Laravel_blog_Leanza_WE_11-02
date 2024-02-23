@@ -5,7 +5,7 @@
 a {
     text-decoration: none;
     color: white;
- 
+
 }
 
 
@@ -103,7 +103,7 @@ a {
     height: auto;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
     padding: 20px;
@@ -168,7 +168,7 @@ a {
     width: 600px;
     height: 85vh;
     padding: 40px;
-    padding-top: 60px;
+    padding-top: 100px;
     background-color: rgba(255, 255, 255, 0.721);
     border-top-left-radius: 37px 140px;
     border-top-right-radius: 23px 130px;
@@ -291,11 +291,12 @@ a {
     background-color: red;
     margin: 0px;
 }
-.noArticles{
+
+.noArticles {
     color: rgba(255, 255, 255, 0.801);
 }
 
-#navbar{
+#navbar {
     position: fixed;
     top: 0;
     right: 0;
@@ -304,11 +305,30 @@ a {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.containerButtonCard{
+.containerButtonCard {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
     height: 60px;
-    
+
+}
+
+.containerFiltri{
+    background-color: #dadada;
+    height: 150px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    padding-top: 30px;
+    margin-top: 50px;
+}
+
+.containerFiltri h1 {
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px #00000016;
+
 }

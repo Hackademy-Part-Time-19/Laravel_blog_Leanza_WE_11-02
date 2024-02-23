@@ -44,18 +44,18 @@ class ArticleController extends Controller
 
 
     public function store (StoreArticleRequest $request){
-        /* dd($request->validated()); */
+       /*  dd($request->validated()); */
         Article::create($request->validated());
         return redirect()->back()->with('success', 'Articolo creato con successo');
     }
 
     public function edit($id){
         $article = Article::find($id);
-        
         return view('form-edit', ['article' => $article]);
     }
 
     public function update(StoreArticleRequest $request, $id){
+        /* dd($request->validated()); */
         $article = Article::find($id);
         $article->update($request->validated());
         return redirect()->back()->with('success', 'Articolo modificato con successo');
@@ -65,6 +65,13 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->delete();
         return redirect()->back()->with('success', 'Articolo eliminato con successo');
+    }
+
+    public function byCategory ($categoryId){
+        $category = Category::find($categoryId);
+        $articles = $category->articles;
+       
+        return view('articles-index', ['articles' => $articles]);
     }
 
 }

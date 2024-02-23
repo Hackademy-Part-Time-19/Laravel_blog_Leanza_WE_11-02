@@ -27,6 +27,7 @@ class StoreArticleRequest extends FormRequest
             'author' => ['required', 'max:30'],
             'category_id' => ['required'],
             'content' => ['required', 'max:5000'],
+            'user_id' => ['required']
         ];
         
     }

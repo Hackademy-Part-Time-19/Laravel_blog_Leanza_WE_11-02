@@ -6,10 +6,11 @@
         @csrf
         @method('PUT')
         <div class="containerForm" style="min-height:600px;height:auto">
-
             @if (session('success'))
                 <div id="alertSuccess"><span class="alert-success">{{ session('success') }}</span></div>
             @endif
+
+
             <h1 style="margin-bottom:20px; font-size:30px">Modifica il tuo articolo</h1>
             <div class="mb-3">
                 <label for="text" class="form-label">Titolo</label>
@@ -19,14 +20,15 @@
             @error('title')
                 <div id="alertError"><span class="alert-danger">{{ $message }}</span></div>
             @enderror
-            <div class="mb-3">
-                <label for="text" class="form-label">Autore</label>
-                <input type="text" name="author" class="form-control" id="exampleInputText"
-                    value="{{ old('author', $article->author) }}">
+
+             <div class="mb-3">
+                <input type="text"  readonly="text" name="user_id" class="form-control" id="exampleInputText " hidden
+                    value="{{auth()->user()->id}}">
             </div>
-            @error('author')
-                <div id="alertError"><span class="alert-danger">{{ $message }}</span></div>
-            @enderror
+            <div class="mb-3">
+                <input type="text"  readonly="text" name="author" class="form-control" id="exampleInputText " 
+                    value="{{auth()->user()->name}}">
+            </div>
 
             <select class="form-select" name="category_id" id="category">
                 <option selected value="">Seleziona la nuova categoria dell'articolo </option>

@@ -19,24 +19,15 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', [ArticleController::class, 'home'])->name('home');
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
-
-
-
-
-
-
-
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/articles/create', [ArticleController::class, 'vaiAForm'])->name('articles.create');
     Route::post("/invio", [ArticleController::class, "store"])->name("invio");
     Route::get('/articles/{id}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
     Route::put('/articles/{id}', [ArticleController::class, 'update'])->name('articles.update');
     Route::delete('/articles/remove/{id}', [ArticleController::class, 'destroy'])->name('articles.destroy');
+    Route::get('/articles/category/{id}', [ArticleController::class, 'byCategory'])->name('articles.byCategory');
+
 });
-
-
 
 // categorie
 

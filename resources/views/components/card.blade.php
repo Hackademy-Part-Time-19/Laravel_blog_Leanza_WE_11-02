@@ -5,12 +5,11 @@
         <p class="card-subtitle mb-2 text-body-secondary"><span class="titoliCard">Categoria:</span> {{ $category }}
         </p>
         <p class="card-text">{{ $content }}</p>
-
         <a id="card-link" href="#" class="card-link">Visualizza di più</a>
 
         {{-- se sono autenticato mostra i pulsanti --}}
         @if (Auth::check())
-        <div class="containerButtonCard">
+        <div class="containerButtonCard" style="position: relative;right:23px">
             <button type="button" class="btn btn-success"><a style="text-decoration: none; color:white;"
                     href="{{ route('articles.edit', ['id' => $id]) }}">Modifica</a></button>
             <form action="{{ route('articles.destroy', ['id' => $id]) }}" method="POST" style="margin-top:20px">
@@ -21,5 +20,6 @@
             </form>
         </div>
         @endif
+        
     </div>
 </div>

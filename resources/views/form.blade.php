@@ -1,9 +1,10 @@
 <x-main-layout>
     <x-navbar />
 
-    <form class="form" action="{{ route('invio') }}" method="POST" style="justify-content: start;padding-top:50px;margin-top:50px">
+
+    <form class="form" action="{{ route('invio') }}" method="POST" style="justify-content: start;padding-top:70px;">
         @csrf
-        <div class="containerForm" style="min-height:600px;height:auto">
+        <div class="containerForm" style="min-height:600px;height:auto; ">
 
             @if (session('success'))
                 <div id="alertSuccess"><span class="alert-success">{{ session('success') }}</span></div>
@@ -18,14 +19,14 @@
                 <div id="alertError"><span class="alert-danger">{{ $message }}</span></div>
             @enderror
             <div class="mb-3">
-                <label for="text" class="form-label">Autore</label>
-                <input type="text" name="author" class="form-control" id="exampleInputText"
-                    value="{{ old('author') }}">
+                <input type="text"  readonly="text" name="user_id" class="form-control" id="exampleInputText " hidden
+                    value="{{auth()->user()->id}}">
             </div>
-            @error('author')
-                <div id="alertError"><span class="alert-danger">{{ $message }}</span></div>
-            @enderror
-
+            <div class="mb-3">
+                <input type="text"  readonly="text" name="author" class="form-control" id="exampleInputText " 
+                    value="{{auth()->user()->name}}">
+            </div>
+            
             <select class="form-select" name="category_id" id="category">
                 <option selected value="">Seleziona la categoria dell'articolo </option>
 
@@ -38,7 +39,7 @@
                 <div id="alertError"><span class="alert-danger">{{ $message }}</span></div>
             @enderror
 
-            <label for="text" class="form-label">Scrivi qui il tuo articolo</label>
+            <label for="text" class="form-label" style="margin-top:10px">Scrivi qui il tuo articolo</label>
             <input type="text" name="content" class="form-control" id="exampleInputText"
                 value="{{ old('content') }}">
             @error('content')
